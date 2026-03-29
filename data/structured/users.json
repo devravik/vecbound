@@ -1,0 +1,4 @@
+[
+  {"id": 1, "name": "Alice Johnson", "role": "Senior Developer", "bio": "Expert in Go and distributed systems. Loves hiking and coffee."},
+  {"id": 2, "name": "Bob Smith", "role": "Product Manager", "bio": "Focused on user experience and product-led growth. Avid reader of sci-fi."}
+]

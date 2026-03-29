@@ -1,0 +1,19 @@
+# Binaries
+vecbound
+libonnxruntime.so
+
+# Databases
+vec.db
+
+# Models & Vocab (Fetched via Makefile)
+model.onnx
+vocab.txt
+
+# OS files
+.DS_Store
+
+# Test results
+test_results.csv
+
+# Go
+vendor/

@@ -1,0 +1,21 @@
+Go handles concurrency through goroutines and channels. 
+A goroutine is a lightweight thread managed by the Go runtime. 
+To start a goroutine, use the 'go' keyword followed by a function call. 
+Channels are the pipes that connect concurrent goroutines. 
+You can send values from one goroutine into channels and receive those values into another goroutine.
+The sync package provides basic synchronization primitives such as mutual exclusion locks (Mutex) and WaitGroups.
+Buffered channels allow for asynchronous communication, while unbuffered channels provide synchronous hand-offs.
+Select statements allow a goroutine to wait on multiple communication operations.
+Context is used for cancellation, deadlines, and passing request-scoped values across API boundaries.
+Worker pools are a common pattern to limit the number of active goroutines processing a task queue.
+
+ADDITIONAL CONCURRENCY CONCEPTS:
+- Data Races: Occur when two goroutines access the same memory concurrently and at least one access is a write. Go provides a 'race detector' to find these.
+- Fan-out/Fan-in: A pattern where multiple goroutines take tasks from a single channel (fan-out) and then a single goroutine aggregates the results (fan-in).
+- Pipelines: A series of stages connected by channels, where each stage is a group of goroutines running the same function.
+- Error Handling in Concurrency: Use an error channel or the 'errgroup' package to propagate errors from background goroutines to the main thread.
+- Memory Consumption: Goroutines start with a small stack (typically 2KB), which grows and shrinks as needed, allowing for millions of goroutines in a single process.
+- CSP (Communicating Sequential Processes): Go's concurrency model is based on Hoare's CSP, emphasizing communication over shared memory.
+- Atomic Operations: The 'sync/atomic' package provides low-level atomic memory primitives useful for global counters or flags without using a Mutex.
+- RWMutex: A reader/writer mutual exclusion lock that allows multiple readers or a single writer, which is more efficient for read-heavy workloads.
+- Once: 'sync.Once' ensures a function is executed exactly once, regardless of how many goroutines call it, perfect for lazy initialization.

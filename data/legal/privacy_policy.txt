@@ -1,0 +1,32 @@
+PRIVACY POLICY AND TERMS OF SERVICE
+
+1. DATA COLLECTION AND USE
+We do not collect any personally identifiable information (PII) unless explicitly provided by the user via manual input. 
+All data indexed by VecBound remains strictly on the user's local machine. 
+No data is transmitted to external servers or cloud providers for processing, analysis, or storage.
+All vectorization (embedding generation) occurs locally via ONNX Runtime using the provided model.
+
+2. STORAGE AND SECURITY
+The indexed data is stored in a local SQLite database file (.db) at a location specified by the user. 
+The user maintains full control and ownership over these database files.
+VecBound does not implement encryption at rest; users are encouraged to use disk-level encryption (e.g., FileVault, BitLocker, LUKS) to secure their data files.
+
+3. THIRD-PARTY LIBRARIES AND DEPENDENCIES
+VecBound utilizes several open-source libraries to provide its functionality:
+- ONNX Runtime: For local AI model inference.
+- modernc.org/sqlite: A CGO-free SQLite implementation for data persistence.
+- spf13/cobra: For the command-line interface.
+Each library is subject to its own respective open-source license agreement (MIT, Apache 2.0, etc.).
+
+4. COOKIES AND TRACKING
+VecBound is a CLI tool and does not use cookies, web beacons, or any form of online tracking or telemetry.
+
+5. USER RESPONSIBILITIES
+Users are responsible for ensuring they have the legal right to index the files provided to VecBound. 
+VecBound is not responsible for any data loss, corruption, or unauthorized access resulting from improper use of the tool.
+
+6. AMENDMENTS
+We reserve the right to modify this policy at any time. Significant changes will be noted in the project's CHANGELOG.md file.
+
+7. CONTACT
+For questions regarding this policy, please open an issue on the project's GitHub repository.

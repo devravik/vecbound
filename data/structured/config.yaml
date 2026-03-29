@@ -1,0 +1,10 @@
+server:
+  port: 8080
+  timeout: 30s
+database:
+  driver: sqlite3
+  path: "./vec.db"
+features:
+  indexing: enabled
+  search: enabled
+  logging: verbose
