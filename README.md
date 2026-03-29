@@ -35,7 +35,7 @@ level=INFO msg=indexing source=./data out=vec.db workers=4 chunk_size=500
 level=INFO msg="initializing database" path=vec.db
 level=INFO msg="processed file" path=data/tech/concurrency.txt chunks=1 embedded=true
 ...
-✅ Indexed 19 files (453 chunks, 19 embedded) -> vec.db
+ Indexed 19 files (453 chunks, 19 embedded) -> vec.db
 ```
 
 **Searching:**

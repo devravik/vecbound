@@ -81,7 +81,7 @@ using a local ONNX model, and store results in a SQLite vector database.`,
 			}
 		}
 
-		fmt.Printf("✅ Indexed %d files (%d chunks, %d embedded) -> %s\n",
+		fmt.Printf(" Indexed %d files (%d chunks, %d embedded) -> %s\n",
 			len(results), totalChunks, embeddedCount, out)
 		return nil
 	},
