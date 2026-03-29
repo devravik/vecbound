@@ -27,6 +27,46 @@ make setup
 ./vecbound search -q "your question"
 ```
 
+### Example Output
+
+**Indexing:**
+```text
+level=INFO msg=indexing source=./data out=vec.db workers=4 chunk_size=500
+level=INFO msg="initializing database" path=vec.db
+level=INFO msg="processed file" path=data/tech/concurrency.txt chunks=1 embedded=true
+...
+✅ Indexed 19 files (453 chunks, 19 embedded) -> vec.db
+```
+
+**Searching:**
+```text
+🔍 Search results for: "how to handle race conditions"
+--------------------------------------------------
+1. [0.8245] data/tech/golang_concurrency.txt (Chunk #42)
+   In Go, race conditions occur when two or more goroutines access the same memory...
+
+2. [0.7512] data/docs/mutex_guide.md (Chunk #12)
+   Using sync.Mutex is the standard way to protect shared state from evaluation order...
+```
+
+**JSON Output:**
+```bash
+./vecbound search -q "race conditions" -f json
+```
+
+```json
+[
+  {
+    "rank": 1,
+    "score": 0.8245,
+    "path": "data/tech/golang_concurrency.txt",
+    "chunk_id": 42,
+    "index": 1,
+    "snippet": "In Go, race conditions occur when two or more goroutines..."
+  }
+]
+```
+
 ---
 
 ## Core Stack
