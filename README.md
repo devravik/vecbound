@@ -4,6 +4,16 @@ VecBound is a Go-based CLI for local-first text vectorization and semantic searc
 
 No Python, Docker, or API keys required. It is a standalone static binary for local data search.
 
+## Installation
+
+### Via Go
+If you have Go installed, you can install the binary directly:
+```bash
+go install github.com/devravik/vecbound@latest
+```
+
+**Note:** You will still need to download the ONNX runtime (`libonnxruntime.so`), the model (`model.onnx`), and the vocabulary (`vocab.txt`) into your project directory for the search to function. If you have the source, use `make setup` to do this automatically.
+
 ## Quickstart
 
 ```bash
